@@ -7,10 +7,10 @@ function SearchForm() {
                 <input className='searchForm__input' placeholder='Фильм'></input>
                 <button className='searchForm__button'>Поиск</button>
             </div>
-            <lable className='searchForm__chekbox'>
-                <input type='checkbox'className='searchForm__radio'/>
-                <p className='searchForm__chekbox-text'>Короткометражки</p>
-            </lable>
+            <label className="searchForm__switch">
+                <input className='searchForm__switch_input' type="checkbox"></input>
+                <span className="searchForm__slider searchForm__round"></span>
+            </label>
         </form>
     )
 }
