@@ -1,4 +1,4 @@
-import './AboutMe.css';
+import "./AboutMe.css";
 import Iam from "../../images/I.jpeg";
 
 function AboutMe() {
@@ -21,7 +21,14 @@ function AboutMe() {
           </p>
           <ul className="about-me__links">
             <li>
-              <a className="about-me__link" href="https://github.com/Snooper227" target="_blank" rel="noreferrer">Github</a>
+              <a
+                className="about-me__link"
+                href="https://github.com/Snooper227"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Github
+              </a>
             </li>
           </ul>
         </div>

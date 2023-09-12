@@ -28,10 +28,12 @@
     font-weight: 400;
     line-height: normal;
 }
-.footer__nav{
+
+.footer__nav {
     display: flex;
     align-items: center;
 }
+
 .footer__nav-list {
     display: flex;
     margin: 0;

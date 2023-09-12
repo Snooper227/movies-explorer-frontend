@@ -1,9 +1,10 @@
-.about-project{
+.about-project {
     padding: 110px 70px;
     text-align: start;
     background-color: #202020;
 }
-.about-project__title{
+
+.about-project__title {
     margin: 0;
     padding: 1px 0 22px;
     border-bottom: 1px solid #fff;
@@ -14,16 +15,20 @@
     line-height: normal;
     letter-spacing: -0.88px;
 }
-.about-project__container{
+
+.about-project__container {
     display: flex;
 }
-.about-project__container:first-of-type{
+
+.about-project__container:first-of-type {
     margin-top: 70px;
 }
-.about-project__container:last-of-type{
-    margin-top:110px;
+
+.about-project__container:last-of-type {
+    margin-top: 110px;
 }
-.about-project__subtitle{
+
+.about-project__subtitle {
     margin: 0;
     color: #fff;
     font-size: 20px;
@@ -32,7 +37,8 @@
     line-height: normal;
     letter-spacing: -0.8px;
 }
-.about-project__text{
+
+.about-project__text {
     margin: 26px 0 0;
     color: #fff;
     font-size: 14px;
@@ -40,7 +46,8 @@
     font-weight: 400;
     line-height: 20px;
 }
-.about-project__timeline-title{
+
+.about-project__timeline-title {
     margin: 0;
     padding: 9px 14px;
     background-color: #3DDC84;
@@ -51,100 +58,123 @@
     font-weight: 400;
     line-height: normal;
 }
-.about-project__timeline-text{
+
+.about-project__timeline-text {
     margin: 15px 0 0;
     color: #8B8B8B;
-text-align: center;
-font-size: 14px;
-font-style: normal;
-font-weight: 500;
-line-height: 17px;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 17px;
 }
-.about-project__timeline-title_type_light{
+
+.about-project__timeline-title_type_light {
     background-color: #303030;
     color: #fff;
 }
-.about-project__timeline:first-of-type{
+
+.about-project__timeline:first-of-type {
     width: 20%;
 }
-.about-project__timeline:last-of-type{
+
+.about-project__timeline:last-of-type {
     width: 80%;
 }
 
 @media screen and (max-width: calc(768px + 20px)) {
-    .about-project{
+    .about-project {
         padding: 90px 50px;
     }
-    .about-project__title{
+
+    .about-project__title {
         padding: 0 0 23px;
     }
-    .about-project__container:first-of-type{
+
+    .about-project__container:first-of-type {
         margin-top: 70px;
     }
-    .about-project__container:last-of-type{
+
+    .about-project__container:last-of-type {
         margin-top: 93px;
     }
-    .about-project__text{
+
+    .about-project__text {
         margin: 22px 0 0;
         font-size: 12px;
         line-height: 18px;
     }
-    .about-project__timeline-title{
+
+    .about-project__timeline-title {
         padding: 9px 10px;
     }
-    .about-project__timeline-text{
+
+    .about-project__timeline-text {
         margin: 14px 0 0;
     }
 }
+
 @media screen and (max-width: calc(460px + 20px)) {
-    .about-project{
+    .about-project {
         padding: 70px 18px;
         text-align: start;
         background-color: #202020;
     }
-    .about-project__title{
+
+    .about-project__title {
         padding: 0 0 28px;
         font-size: 18px;
         letter-spacing: -0.72px;
     }
-    .about-project__container{
+
+    .about-project__container {
         display: flex;
     }
-    .about-project__container:first-of-type{
+
+    .about-project__container:first-of-type {
         flex-direction: column;
         margin-top: 60px;
     }
-    .about-project__container:last-of-type{
+
+    .about-project__container:last-of-type {
         margin-top: 60px;
     }
-    .about-project__subtitle{
+
+    .about-project__subtitle {
         font-size: 18px;
         letter-spacing: -0.72px;
     }
-    .about-project__info_second{
+
+    .about-project__info_second {
         margin-top: 56px;
     }
-    .about-project__text{
+
+    .about-project__text {
         margin: 16px 0 0;
         font-size: 11px;
         line-height: 16px;
     }
-    .about-project__timeline-title{
+
+    .about-project__timeline-title {
         padding: 11px 10px;
         font-size: 11px;
     }
-    .about-project__timeline-text{
+
+    .about-project__timeline-text {
         margin: 10px 0 0;
-    font-size: 11px;
+        font-size: 11px;
     }
-    .about-project__timeline-title_type_light{
+
+    .about-project__timeline-title_type_light {
         background-color: #303030;
         color: #fff;
     }
-    .about-project__timeline:first-of-type{
+
+    .about-project__timeline:first-of-type {
         width: 35%;
     }
-    .about-project__timeline:last-of-type{
+
+    .about-project__timeline:last-of-type {
         width: 65%;
     }
 }

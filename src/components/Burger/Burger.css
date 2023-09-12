@@ -1,18 +1,19 @@
 @media screen and (min-width: calc(1280px + 20px)) {
-    .burger{
+    .burger {
         display: none;
     }
 }
 
 @media screen and (max-width: calc(1280px + 20px)) {
-    .burger{
+    .burger {
         display: none;
     }
 }
-    @media screen and (max-width: calc(768px + 20px)) {
-    .burger{
+
+@media screen and (max-width: calc(768px + 20px)) {
+    .burger {
         position: absolute;
-        top:0;
+        top: 0;
         right: 0;
         max-width: 768px;
         width: 66%;
@@ -22,15 +23,18 @@
         justify-content: center;
         z-index: 2;
     }
-    .burger__off{
+
+    .burger__off {
         display: none;
     }
-    .burger-menu{
+
+    .burger-menu {
         display: flex;
         width: 100%;
         flex-direction: column;
     }
-    .burger__button_close{
+
+    .burger__button_close {
         padding: 0;
         margin: 22.44px 22.44px 0 0;
         background: url('../../images/Krest_burger.svg') no-repeat;
@@ -40,18 +44,21 @@
         width: 22px;
         height: 22px;
     }
-    .burger__button_close:hover{
+
+    .burger__button_close:hover {
         opacity: 0.6;
         cursor: pointer;
     }
-    .burger-menu__container{
+
+    .burger-menu__container {
         margin: 105.44px auto 92px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         text-align: center;
     }
-    .burger-menu__items{
+
+    .burger-menu__items {
         display: flex;
         flex-direction: column;
         margin: 0;
@@ -59,18 +66,22 @@
         list-style: none;
         justify-content: center;
         align-items: center;
-    
+
     }
-    .burger-menu__item{
+
+    .burger-menu__item {
         padding-bottom: 4px;
     }
-    .burger-menu__item:not(:last-child){
+
+    .burger-menu__item:not(:last-child) {
         margin-bottom: 22px;
     }
-    .burger-menu__item:last-of-type{
+
+    .burger-menu__item:last-of-type {
         margin-bottom: 400px;
     }
-    .burger-menu__link{
+
+    .burger-menu__link {
         color: #FFF;
         text-align: center;
         text-decoration: none;
@@ -80,14 +91,17 @@
         font-weight: 500;
         line-height: normal;
     }
-    .burger-menu__link:hover{
+
+    .burger-menu__link:hover {
         opacity: 0.6;
         cursor: pointer;
     }
-    .burger-menu__link_active{
+
+    .burger-menu__link_active {
         border-bottom: 1px solid #fff;
     }
-    .burger-menu__button_profile{
+
+    .burger-menu__button_profile {
         background: url('../../images/profile.svg') center no-repeat;
         border: none;
         border-radius: 6px;
@@ -97,12 +111,13 @@
         transition: opacity 0.35s linear;
         cursor: pointer;
     }
-    .burger-menu__item_account{
+
+    .burger-menu__item_account {
         margin: 0;
         display: flex;
         padding: 0;
         text-decoration: none;
-        color:#FFF;
+        color: #FFF;
         justify-content: space-between;
         align-items: center;
         width: 100px;
@@ -112,7 +127,8 @@
         font-weight: 500;
         line-height: 16px;
     }
-    .burger-menu__item_account:hover{
+
+    .burger-menu__item_account:hover {
         opacity: 0.6;
         cursor: pointer;
     }

@@ -1,21 +1,25 @@
-.navigation{
+.navigation {
     display: flex;
     align-items: center;
 }
-.navigation__items{
+
+.navigation__items {
     display: flex;
     align-items: center;
     margin: 0;
     padding: 0;
     list-style-type: none;
 }
-.navigation__item:not(:last-child){
+
+.navigation__item:not(:last-child) {
     margin-right: 20px;
 }
-.navigation__item:last-child{
+
+.navigation__item:last-child {
     margin-left: 30px;
 }
-.navigation__link{
+
+.navigation__link {
     color: #FFF;
     text-align: right;
     font-family: Inter;
@@ -25,18 +29,20 @@
     line-height: 18px;
     text-decoration: none;
 }
-.navigation__link:hover{
+
+.navigation__link:hover {
     opacity: .6;
     cursor: pointer;
 }
-.navigation__link_active{
-}
-.navigation__item_account{
+
+.navigation__link_active {}
+
+.navigation__item_account {
     margin-right: 70px;
     display: flex;
     padding: 0;
     text-decoration: none;
-    color:#FFF;
+    color: #FFF;
     justify-content: space-between;
     align-items: center;
     width: 100px;
@@ -46,14 +52,15 @@
     font-weight: 500;
     line-height: 16px;
 }
-.navigation__item_account:hover{
+
+.navigation__item_account:hover {
     opacity: .6;
     cursor: pointer;
 }
-.navigation__item_account{
 
-}
-.navigation__item_button{
+.navigation__item_account {}
+
+.navigation__item_button {
     background: url('../../images/profile.svg') center no-repeat;
     border: none;
     border-radius: 6px;
@@ -63,8 +70,9 @@
     transition: opacity 0.35s linear;
     cursor: pointer;
 }
-@media screen and (max-width: calc(768px + 20px)){
-    .navigation{
+
+@media screen and (max-width: calc(768px + 20px)) {
+    .navigation {
         display: none;
     }
 }
