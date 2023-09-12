@@ -8,3 +8,30 @@
     column-gap: 32px;
     row-gap: 29px;
 }
+.moviesCardList__add{
+    margin: 50px auto 80px;
+    width: 1140px;
+    height: 36px;
+    border-radius: 6px;
+    background: #2F2F2F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.moviesCardList__add:hover{
+    opacity: 0.6;
+    cursor: pointer;
+}
+.moviesCardList__button{
+    background: #2F2F2F;
+    border: none;
+width: 200px;
+height: 16px;
+flex-shrink: 0;
+    color: #FFF;
+text-align: center;
+font-size: 12px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}

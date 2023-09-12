@@ -1,41 +1,44 @@
 import React from "react";
-import Logo from "../../images/logo_diplom.svg";
+import { useState } from "react";
+import Logo from "../Logo/Logo";
+import Navigation from "../Navigation/Navigation";
 import Burger from "../Burger/Burger"
 import { Link, useLocation } from "react-router-dom";
 import './Header.css';
 
-function Header(props) {
-  // const location = useLocation();
+function Header({ loggedIn }) {
+  const [isBurger, setIsBurger] = useState(false);
+  const { pathname } = useLocation();
 
-    return(
-        <header className="header">
-          {props.children}
-        </header>
-        // {/* {
-        //   !loggedIn ?
-        //   <header className="header header__loggedIn">
-        //     <Link to="/" className="header__logo" />
-        //     <div className="header__buttons">
-        //       <Link to="/signup" className="header__button">Регистрация</Link>
-        //       <Link to="/signin" className="header__button header__button_type_signin">Войти</Link>
-        //     </div>
-        //   </header>
-        //   :
-        //   <header className={location.pathname==="/" ? "header_main header" : "header"}>
-        //      <Link to="/" className="header__logo" />
-        //      <div className="header__buttons header__buttons_registered">
-        //         <Link to="/movies" className={location.pathname=== '/movies' ? "" : ""}>Фильмы</Link>
-        //         <Link to="/saved-movies" className={location.pathname=== '/movies' ? "" : ""}>Сохраненные фильмы</Link>
-        //      </div>
-        //      <div className="header__buttons header__buttons_registered">
-        //       <Link to="/profile" className={location.pathname === '/' ? 'header' :''}>Аккаунт</Link>
-        //      </div>
+  function handleIsBurger() {
+    setIsBurger(!isBurger);
+  }
 
-        //      <button className="nav__button" onClick={onBurger} />
-        //      <Burger isBurger={isBurger} onClose={onBurger} />
-        //   </header>
-        // } */}
-      );
+  const headerIsLogginIn = (
+    <div className='header__container_auth'>
+      <Navigation />
+      <div className='header__burger' onClick={handleIsBurger}></div>
+      <Burger onClose={handleIsBurger} isBurger={isBurger} />
+    </div>
+  );
+
+  const headerIsLoggin = (
+    <div className='header__mainContainer'>
+      <div className="header__buttons">
+          <a href="/signup" className="header__button">Регистрация</a>
+          <a href="/signin" className="header__button header__button_type_signin">Войти</a>
+      </div>
+    </div>
+  );
+
+  return(
+      <header className={pathname !== '/' ? 'header' : 'header header__main'}>
+        <div className='header__container'>
+          <Logo />
+          {loggedIn ? headerIsLogginIn : headerIsLoggin}
+        </div>
+      </header>
+  )
 }
 
 export default Header;

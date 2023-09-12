@@ -9,27 +9,32 @@ function Login() {
                 <h3 className="login__title">Рады Видеть!</h3>
             </div>
             <form className="login__form">
-                <p className="login_lable">Почта</p>
-                <input
-                    className="login__input login__input_login-email"
-                    placeholder="Email"
-                    type="email"
-                    required
-                />
-                <p className="login_lable">Пароль</p>
-                <input
-                    className="login__input login__input_login-pass"
-                    placeholder="Пароль"
-                    type="password"
-                    required
-                />
+                <div className='login__box'>
+                    <p className="login_lable">E-mail</p>
+                    <input
+                        className="login__input login__input_login-email"
+                        type="email"
+                        required
+                    />
+                    <div className="login__bottom-line"></div>
+                    <span className="login__input-error" id="name-input-error"><p>Что-то пошло не так...</p></span>
+                </div>
+                <div className='login__box'>
+                    <p className="login_lable">Пароль</p>
+                    <input
+                        className="login__input login__input_login-pass"
+                        type="password"
+                        required
+                    />
+                    <div className="login__bottom-line"></div>
+                    <span className="login__input-error" id="name-input-error"><p>Что-то пошло не так...</p></span>
+                </div>
                 <button className="login__button" type="submit">
                     Войти
                 </button>
                 <div className="login__text">
                     Еще не зарегистрированы?
                     <Link to="/signup" className="login__link">
-                    {" "}
                     Регистрация
                 </Link>
                 </div>

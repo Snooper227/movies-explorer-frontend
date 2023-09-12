@@ -1,14 +1,21 @@
+import { useState } from 'react';
 import './MoviesCard.css';
 
-function MoviesCard() {
+function MoviesCard({}) {
+    // const isLiked = true;
+    // const movieLikeButtonClassName = {isLiked ? 'moviesCard__button' : 'moviesCard__button MoviesCard__button_active'};
+    const [isActive, setActive] = useState(false);
+    function handleIsActive() {
+        setActive(!isActive);
+      }
     return(
-        <div className='MoviesCard'>
-            <div className='MoviesCard__header'>
-                <h3 className='MoviesCard__title'>В погоне за Бенкси</h3>
-                <p className='MoviesCard__time'>0ч 42м</p>
+        <div className='moviesCard'>
+            <div className='moviesCard__header'>
+                <h3 className='moviesCard__title'>В погоне за Бенкси</h3>
+                <p className='moviesCard__time'>0ч 42м</p>
             </div>
-            <img className='MoviesCard__image'/>
-            <button className="MoviesCard__button" type='submit'>Сохранить</button>
+            <img className='moviesCard__image' />
+            {!isActive ? <button className='moviesCard__button' type='button' onClick={handleIsActive}>Сохранить</button> : <button className='moviesCard__button_active' type='button' onClick={handleIsActive}></button>}
         </div>
     )
 }

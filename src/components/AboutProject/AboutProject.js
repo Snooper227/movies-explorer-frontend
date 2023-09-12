@@ -2,7 +2,7 @@ import "./AboutProject.css";
 
 function aboutProject() {
 return(
-<section className="about-project">
+<section className="about-project" id='about-project'>
   <h2 className="about-project__title">О проекте</h2>
   <div className="about-project__container">
     <div className="about-project__info">
@@ -12,7 +12,7 @@ return(
         функциональности и финальные доработки.
       </p>
     </div>
-    <div className="about-project__info">
+    <div className="about-project__info about-project__info_second">
       <p className="about-project__subtitle">На выполнение диплома ушло 5 недель</p>
       <p className="about-project__text">
         У каждого этапа был мягкий и жёсткий дедлайн, которые нужно было
