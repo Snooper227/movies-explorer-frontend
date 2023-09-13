@@ -6,7 +6,7 @@ function Login() {
     <main className="login">
       <div className="login__container">
         <Link to="/" className="login__logo" />
-        <h3 className="login__title">Рады Видеть!</h3>
+        <h1 className="login__title">Рады Видеть!</h1>
       </div>
       <form className="login__form">
         <div className="login__box">
@@ -14,6 +14,7 @@ function Login() {
           <input
             className="login__input login__input_login-email"
             type="email"
+            placeholder="Почта"
             required
           />
           <div className="login__bottom-line"></div>
@@ -26,6 +27,7 @@ function Login() {
           <input
             className="login__input login__input_login-pass"
             type="password"
+            placeholder="Пароль"
             required
           />
           <div className="login__bottom-line"></div>

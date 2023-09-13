@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 function Burger({ onClose, isBurger }) {
   return (
     <section className={`burger ${!isBurger && "burger__off"}`}>
+      <div className="burger__popup"></div>
       <div className="burger-menu">
         <button className="burger__button_close" onClick={onClose}></button>
         <nav className="burger-menu__container">

@@ -1,4 +1,6 @@
 .profile {
+    width: 410px;
+    margin: 0 auto 70px;
     display: flex;
     flex-direction: column;
 }
@@ -14,6 +16,7 @@
 .profile__title {
     color: #FFF;
     text-align: center;
+    font-family: "Inter", Arial, sans-serif;
     font-size: 24px;
     font-style: normal;
     font-weight: 500;
@@ -37,6 +40,7 @@
     margin: 0;
     color: #FFF;
     font-size: 11px;
+    font-family: "Inter", Arial, sans-serif;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -49,6 +53,7 @@
     margin: 0;
     color: #FFF;
     text-align: right;
+    font-family: "Inter", Arial, sans-serif;
     font-size: 11px;
     font-style: normal;
     font-weight: 400;
@@ -60,6 +65,7 @@
     color: #FFF;
     text-align: center;
     font-size: 13px;
+    font-family: "Inter", Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -78,11 +84,41 @@
     color: #EE3465;
     text-align: center;
     font-size: 13px;
+    font-family: "Inter", Arial, sans-serif;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
     background-color: #202020;
     border: none;
+}
+
+.profile__button_change_disabled {
+    display: none;
+}
+
+.profile__button_save {
+    margin: 0 auto 16px;
+    width: 410px;
+    height: 45px;
+    color: #FFF;
+    text-align: center;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border-radius: 3px;
+    background: #3456F3;
+    border: none
+}
+
+.profile__button_save:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.profile__button_save_disabled {
+    display: none;
 }
 
 .profile__button_exit:hover {
@@ -106,6 +142,7 @@
 
 @media screen and (max-width: calc(410px + 20px)) {
     .profile {
+        width: 300px;
         margin-bottom: 40px;
     }
 
@@ -134,4 +171,11 @@
     .profile__button_exit {
         font-size: 12px;
     }
+
+    .profile__button_save {
+        margin: 0 auto 16px;
+        font-size: 12px;
+        width: 300px;
+    }
+
 }

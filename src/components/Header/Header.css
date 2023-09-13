@@ -1,4 +1,6 @@
 .header {
+    max-width: 1280px;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
 }
@@ -23,6 +25,7 @@
     color: #FFF;
     text-decoration: none;
     transition: opacity .2s linear;
+    font-family: "Inter", Arial, sans-serif;
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
@@ -47,6 +50,7 @@
     justify-content: center;
     align-items: center;
     width: 76px;
+    font-family: "Inter", Arial, sans-serif;
     height: 32px;
     color: #000;
     border: 1px solid #3DDC84;
@@ -68,5 +72,13 @@
     .header__burger:hover {
         opacity: 0.6;
         cursor: pointer;
+    }
+}
+
+@media screen and (max-width: calc(320px + 20px)) {
+    .header__burger {
+        margin: 15px 14px 16px 0;
+        width: 40px;
+        height: 43px;
     }
 }

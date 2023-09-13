@@ -1,4 +1,4 @@
-import "./Movies.js";
+import "./Movies.css";
 import Header from "../Header/Header";
 import MoviesCardList from "../MoviesCardList/MoviesCardList";
 import SearchForm from "../SearchForm/SearchForm";
@@ -8,15 +8,17 @@ import { Link } from "react-router-dom";
 
 function Movies({ onSaveMovie, onDeleteSaveMovie }) {
   return (
-    <section className="movies">
+    <>
       <Header loggedIn={true} />
-      <SearchForm />
-      <MoviesCardList
-        onSaveMovie={onSaveMovie}
-        onDeleteSaveMovie={onDeleteSaveMovie}
-      />
+      <section className="movies">
+        <SearchForm />
+        <MoviesCardList
+          onSaveMovie={onSaveMovie}
+          onDeleteSaveMovie={onDeleteSaveMovie}
+        />
+      </section>
       <Footer />
-    </section>
+    </>
   );
 }
 

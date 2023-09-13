@@ -16,12 +16,21 @@
         top: 0;
         right: 0;
         max-width: 768px;
-        width: 66%;
+        width: 520px;
         height: 100%;
-        background-color: #202020;
         display: flex;
         justify-content: center;
-        z-index: 2;
+    }
+
+    .burger__popup {
+        opacity: 0.3;
+        background: #000;
+        position: absolute;
+        left: -50%;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+        z-index: 1;
     }
 
     .burger__off {
@@ -32,6 +41,8 @@
         display: flex;
         width: 100%;
         flex-direction: column;
+        background-color: rgba(32, 32, 32, 1);
+        z-index: 2;
     }
 
     .burger__button_close {
@@ -43,6 +54,7 @@
         border: none;
         width: 22px;
         height: 22px;
+        flex-shrink: 0;
     }
 
     .burger__button_close:hover {
@@ -55,7 +67,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        text-align: center;
+        z-index: 2;
     }
 
     .burger-menu__items {
@@ -87,6 +99,7 @@
         text-decoration: none;
         font-feature-settings: 'clig' off, 'liga' off;
         font-size: 18px;
+        font-family: "Inter", Arial, sans-serif;
         font-style: normal;
         font-weight: 500;
         line-height: normal;
@@ -122,6 +135,7 @@
         align-items: center;
         width: 100px;
         height: 30px;
+        font-family: "Inter", Arial, sans-serif;
         font-size: 14px;
         font-style: normal;
         font-weight: 500;
@@ -131,5 +145,36 @@
     .burger-menu__item_account:hover {
         opacity: 0.6;
         cursor: pointer;
+    }
+}
+
+@media screen and (max-width: calc(450px + 20px)) {
+    .burger {
+        width: 320px;
+        width: 100%;
+    }
+
+    .burger__button_close {
+        margin: 13.44px 13.44px 0 0;
+    }
+
+    .burger-menu__container {
+        margin: 99.44px auto 48px;
+    }
+
+    .burger-menu__item {
+        padding-bottom: 7px;
+    }
+
+    .burger-menu__item:not(:last-child) {
+        margin-bottom: 15px;
+    }
+
+    .burger-menu__item:last-of-type {
+        margin-bottom: 444px;
+    }
+
+    .burger-menu__link_active {
+        border-bottom: 2px solid #fff;
     }
 }

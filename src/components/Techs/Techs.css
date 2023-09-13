@@ -4,6 +4,7 @@
 }
 
 .techs__header {
+    font-family: "Inter", Arial, sans-serif;
     margin: 0;
     padding: 1px 0 22px;
     color: #fff;
@@ -26,6 +27,7 @@
     color: #fff;
     text-align: center;
     font-size: 50px;
+    font-family: "Inter", Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     line-height: 58px;
@@ -35,6 +37,7 @@
 .techs__discriptions {
     color: #fff;
     max-width: 460px;
+    font-family: "Inter", Arial, sans-serif;
     margin: 0;
     font-size: 14px;
     line-height: 20px;
@@ -63,6 +66,7 @@
     border-radius: 10px;
     background-color: #303030;
     font-size: 14px;
+    font-family: "Inter", Arial, sans-serif;
     font-weight: normal;
     line-height: 17px;
     letter-spacing: -0.04em;

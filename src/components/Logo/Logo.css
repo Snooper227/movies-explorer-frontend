@@ -5,7 +5,14 @@
     height: 38px;
 }
 
-.logo:hover {
-    opacity: 0.6;
-    cursor: pointer;
+@media screen and (max-width: calc(768px + 20px)) {
+    .logo {
+        margin: 18px 0 18px 30px;
+    }
+}
+
+@media screen and (max-width: calc(320px + 20px)) {
+    .logo {
+        margin: 18px 0 18px 14px;
+    }
 }

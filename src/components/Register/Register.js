@@ -6,7 +6,7 @@ function Register() {
     <main className="register">
       <div className="register__container">
         <Link to="/" className="register__logo" />
-        <h3 className="register__title">Добро пожаловать!</h3>
+        <h1 className="register__title">Добро пожаловать!</h1>
       </div>
       <form className="register__form">
         <div className="register__box">
@@ -15,6 +15,7 @@ function Register() {
             className="register__input register__input_name"
             type="name"
             required
+            placeholder="Имя"
           />
           <div className="register__bottom-line"></div>
           <span className="register__input-error" id="name-input-error">
@@ -27,6 +28,7 @@ function Register() {
             className="register__input register__input_login-email"
             type="email"
             required
+            placeholder="Почта"
           />
           <div className="register__bottom-line"></div>
           <span className="register__input-error" id="email-input-error">
@@ -38,10 +40,14 @@ function Register() {
           <input
             className="register__input register__input_login-pass"
             type="password"
+            placeholder="Пароль"
             required
           />
           <div className="register__bottom-line"></div>
-          <span className="register__input-error" id="password-input-error">
+          <span
+            className="register__input-error register__input-error_active"
+            id="password-input-error"
+          >
             <p>Что-то пошло не так...</p>
           </span>
         </div>

@@ -2,6 +2,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import { CurrentUserContext } from "../../contexts/CurrenUserContext";
 import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 import Main from "../Main/Main";
 import Movies from "../Movies/Movies";
 import Login from "../Login/Login";

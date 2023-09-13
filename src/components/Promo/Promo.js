@@ -1,5 +1,5 @@
 import "./Promo.css";
-import Logopromo from "../../images/Earth_white.svg";
+import Logopromo from "../../images/Earth.svg";
 
 function Promo() {
   return (
@@ -15,7 +15,7 @@ function Promo() {
           Узнать больше
         </a>
       </div>
-      <img className="promo__logo" src={Logopromo} alt="Logo" />
+      <img className="promo__logo" src={Logopromo} alt="Логотип" />
     </section>
   );
 }

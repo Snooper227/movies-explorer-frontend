@@ -1,8 +1,8 @@
 import { useState } from "react";
-import photo from '../../images/movie.png';
+import photo from "../../images/movie.png";
 import "./MoviesCard.css";
 
-function MoviesCard({}) {
+function MoviesCard({ isSave }) {
   // const isLiked = true;
   // const movieLikeButtonClassName = {isLiked ? 'moviesCard__button' : 'moviesCard__button MoviesCard__button_active'};
   const [isActive, setActive] = useState(false);
@@ -15,7 +15,7 @@ function MoviesCard({}) {
         <h3 className="moviesCard__title">В погоне за Бенкси</h3>
         <p className="moviesCard__time">0ч 42м</p>
       </div>
-      <img className="moviesCard__image" src={photo} alt='картинка'/>
+      <img className="moviesCard__image" src={photo} alt="картинка" />
       {!isActive ? (
         <button
           className="moviesCard__button"
@@ -26,7 +26,9 @@ function MoviesCard({}) {
         </button>
       ) : (
         <button
-          className="moviesCard__button_active"
+          className={
+            !isSave ? "moviesCard__button_active" : "moviesCard__button_delete"
+          }
           type="button"
           onClick={handleIsActive}
         ></button>

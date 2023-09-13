@@ -1,4 +1,6 @@
 .pageNotFound {
+    max-width: 1280px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     background: #202020;
@@ -10,6 +12,7 @@
     text-align: center;
     font-size: 140px;
     font-style: normal;
+    font-family: "Inter", Arial, sans-serif;
     font-weight: 400;
     line-height: normal;
 }
@@ -20,6 +23,7 @@
     text-align: center;
     font-size: 16px;
     font-style: normal;
+    font-family: "Inter", Arial, sans-serif;
     font-weight: 400;
     line-height: normal;
 }
@@ -31,6 +35,7 @@
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
+    font-family: "Inter", Arial, sans-serif;
     line-height: normal;
     border: none;
     background: #202020;

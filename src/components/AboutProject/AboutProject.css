@@ -11,6 +11,7 @@
     color: #FFF;
     font-size: 22px;
     font-style: normal;
+    font-family: "Inter", Arial, sans-serif;
     font-weight: 400;
     line-height: normal;
     letter-spacing: -0.88px;
@@ -18,6 +19,10 @@
 
 .about-project__container {
     display: flex;
+}
+
+.about-project__info:not(:last-child) {
+    margin-right: 40px;
 }
 
 .about-project__container:first-of-type {
@@ -33,6 +38,7 @@
     color: #fff;
     font-size: 20px;
     font-style: normal;
+    font-family: "Inter", Arial, sans-serif;
     font-weight: 400;
     line-height: normal;
     letter-spacing: -0.8px;
@@ -42,6 +48,7 @@
     margin: 26px 0 0;
     color: #fff;
     font-size: 14px;
+    font-family: "Inter", Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     line-height: 20px;
@@ -53,6 +60,7 @@
     background-color: #3DDC84;
     color: #FFF;
     text-align: center;
+    font-family: "Inter", Arial, sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -65,6 +73,7 @@
     text-align: center;
     font-size: 14px;
     font-style: normal;
+    font-family: "Inter", Arial, sans-serif;
     font-weight: 500;
     line-height: 17px;
 }
@@ -85,6 +94,10 @@
 @media screen and (max-width: calc(768px + 20px)) {
     .about-project {
         padding: 90px 50px;
+    }
+
+    .about-project__info:not(:last-child) {
+        margin-right: 30px;
     }
 
     .about-project__title {
@@ -114,7 +127,7 @@
     }
 }
 
-@media screen and (max-width: calc(460px + 20px)) {
+@media screen and (max-width: calc(530px + 20px)) {
     .about-project {
         padding: 70px 18px;
         text-align: start;

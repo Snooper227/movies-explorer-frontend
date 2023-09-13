@@ -7,29 +7,29 @@ function SearchForm({ value, onChange }) {
     setActive(!isActive);
   }
   return (
-    <form className="searchForm">
-      <div className="searchForm__container">
+    <section className="searchForm">
+      <form className="searchForm__container">
         <input className="searchForm__input" placeholder="Фильм"></input>
         <button className="searchForm__button">Поиск</button>
-      </div>
+      </form>
       <div className="searchForm__checkbox">
         <button
           className={
             !isActive
-              ? "searchForm__button_checkbox"
-              : "searchForm__button_checkbox searchForm__button_checkbox_active"
+              ? "searchForm__checkbox_button"
+              : "searchForm__checkbox_button searchForm__checkbox_button_active"
           }
           type="button"
           onClick={handleIsActive}
         ></button>
-        <p className="searchForm__text">Короткометражки</p>
+        <p className="searchForm__checkbox_text">Короткометражки</p>
       </div>
       {/* <label className="searchForm__checkbox-google">
                 <input className='searchForm__checkbox_input' type="checkbox" />
                 <span className="searchForm__checkbox-google-switch"></span>
                 <p className='searchForm__text'>Короткометражки</p>
             </label> */}
-    </form>
+    </section>
   );
 }
 export default SearchForm;

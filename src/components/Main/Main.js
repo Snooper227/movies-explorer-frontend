@@ -10,15 +10,17 @@ import "./Main.css";
 
 function Main({ isBurger, onBurger, loggedIn }) {
   return (
-    <main className="main">
+    <div className="content">
       <Header loggedIn={true} />
-      <Promo />
-      <AboutProject />
-      <Techs />
-      <AboutMe />
-      <Portfolio />
+      <main className="main">
+        <Promo />
+        <AboutProject />
+        <Techs />
+        <AboutMe />
+        <Portfolio />
+      </main>
       <Footer />
-    </main>
+    </div>
   );
 }
 export default Main;
