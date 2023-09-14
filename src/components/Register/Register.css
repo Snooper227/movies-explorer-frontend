@@ -19,8 +19,12 @@
     margin-bottom: 40px;
     background: url("../../images/logo_diplom.svg") right center no-repeat;
 }
-
+.register__logo:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
 .register__title {
+    margin: 0;
     width: 396px;
     color: #FFF;
     font-family: "Inter", Arial, sans-serif;
@@ -51,7 +55,7 @@
 .register__input {
     padding: 0;
     width: 396px;
-    margin: 5px auto 10px;
+    margin: 5px auto 22px;
     font-family: "Inter", Arial, sans-serif;
     color: #FFF;
     font-size: 14px;
@@ -62,9 +66,9 @@
     border: none;
 }
 
-.register__bottom-line:not(:last-child) {
+/* .register__bottom-line:not(:last-child) {
     margin-bottom: 22px;
-}
+} */
 
 .register__input-error {
     display: none;
@@ -159,7 +163,7 @@
     }
 
     .register__logo {
-        margin: 0 auto 0;
+        margin: 0 auto 50px;
     }
 
     .register__bottom-line {

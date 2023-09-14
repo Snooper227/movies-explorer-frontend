@@ -16,22 +16,26 @@ function MoviesCard({ isSave }) {
         <p className="moviesCard__time">0ч 42м</p>
       </div>
       <img className="moviesCard__image" src={photo} alt="картинка" />
-      {!isActive ? (
-        <button
-          className="moviesCard__button"
-          type="button"
-          onClick={handleIsActive}
-        >
-          Сохранить
-        </button>
+      {!isSave ? (
+        <div className="moviesCard__box">
+          {!isActive ? (
+            <button
+              className="moviesCard__button"
+              type="button"
+              onClick={handleIsActive}
+            >
+              Сохранить
+            </button>
+          ) : (
+            <button
+              className="moviesCard__button_active"
+              type="button"
+              onClick={handleIsActive}
+            ></button>
+          )}
+        </div>
       ) : (
-        <button
-          className={
-            !isSave ? "moviesCard__button_active" : "moviesCard__button_delete"
-          }
-          type="button"
-          onClick={handleIsActive}
-        ></button>
+        <button className="moviesCard__button_delete" type="button"></button>
       )}
     </div>
   );

@@ -18,6 +18,11 @@
     height: 38px;
 }
 
+.login__logo:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
 .login__title {
     margin: 0;
     width: 396px;

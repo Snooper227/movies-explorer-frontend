@@ -10,13 +10,15 @@ function Movies({ onSaveMovie, onDeleteSaveMovie }) {
   return (
     <>
       <Header loggedIn={true} />
-      <section className="movies">
-        <SearchForm />
-        <MoviesCardList
-          onSaveMovie={onSaveMovie}
-          onDeleteSaveMovie={onDeleteSaveMovie}
-        />
-      </section>
+      <main>
+        <section className="movies">
+          <SearchForm />
+          <MoviesCardList
+            onSaveMovie={onSaveMovie}
+            onDeleteSaveMovie={onDeleteSaveMovie}
+          />
+        </section>
+      </main>
       <Footer />
     </>
   );

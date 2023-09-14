@@ -75,6 +75,10 @@
     border: none;
     margin-right: 14px;
 }
+.searchForm__checkbox_button:hover{
+    opacity: 0.6;
+    cursor: pointer;
+}
 
 .searchForm__checkbox_button_active {
     background: url('../../images/smalltumb_active.svg') no-repeat center;

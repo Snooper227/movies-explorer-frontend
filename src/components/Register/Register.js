@@ -45,7 +45,7 @@ function Register() {
           />
           <div className="register__bottom-line"></div>
           <span
-            className="register__input-error register__input-error_active"
+            className="register__input-error"
             id="password-input-error"
           >
             <p>Что-то пошло не так...</p>

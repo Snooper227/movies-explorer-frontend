@@ -6,17 +6,19 @@ import Footer from "../Footer/Footer";
 import "./SavedMovies.css";
 
 function SavedMovies() {
-  const [isSave, setSave] = useState(false);
+  const [isSave, setSave] = useState(true);
   function handleIsActive() {
     setSave(!isSave);
   }
   return (
     <>
       <Header loggedIn={true} />
-      <section className="savedMovies">
-        <SearchForm />
-        <MoviesCardList isSave={handleIsActive} />
-      </section>
+      <main>
+        <section className="savedMovies">
+          <SearchForm />
+          <MoviesCardList isSave={handleIsActive} />
+        </section>
+      </main>
       <Footer />
     </>
   );
