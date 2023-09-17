@@ -16,13 +16,13 @@ function SearchForm({ value, onChange }) {
         <button
           className={
             !isActive
-              ? "searchForm__checkbox_button"
-              : "searchForm__checkbox_button searchForm__checkbox_button_active"
+              ? "searchForm__checkbox-button"
+              : "searchForm__checkbox-button searchForm__checkbox-button-active"
           }
           type="button"
           onClick={handleIsActive}
         ></button>
-        <p className="searchForm__checkbox_text">Короткометражки</p>
+        <p className="searchForm__checkbox-text">Короткометражки</p>
       </div>
       {/* <label className="searchForm__checkbox-google">
                 <input className='searchForm__checkbox_input' type="checkbox" />

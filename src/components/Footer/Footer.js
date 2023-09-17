@@ -3,14 +3,14 @@ import "./Footer.css";
 function Footer() {
   return (
     <footer className="footer">
-      <h3 className="footer__title">
+      <p className="footer__title">
         Учебный проект Яндекс.Практикум х BeatFilm.
-      </h3>
+      </p>
       <div className="footer__container">
         <p className="footer__copyright">&copy; 2023</p>
         <nav className="footer__nav">
           <ul className="footer__nav-list">
-            <li className="footer_nav-item">
+            <li className="footer__nav-item">
               <a
                 className="footer__nav-link"
                 target="_blank"
@@ -20,7 +20,7 @@ function Footer() {
                 Яндекс.Практикум
               </a>
             </li>
-            <li className="footer_nav-item">
+            <li className="footer__nav-item">
               <a
                 className="footer__nav-link"
                 target="_blank"

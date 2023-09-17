@@ -10,7 +10,7 @@ function Login() {
       </div>
       <form className="login__form">
         <div className="login__box">
-          <p className="login_lable">E-mail</p>
+          <p className="login__lable">E-mail</p>
           <input
             className="login__input login__input_login-email"
             type="email"
@@ -23,7 +23,7 @@ function Login() {
           </span>
         </div>
         <div className="login__box">
-          <p className="login_lable">Пароль</p>
+          <p className="login__lable">Пароль</p>
           <input
             className="login__input login__input_login-pass"
             type="password"

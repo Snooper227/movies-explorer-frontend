@@ -36,9 +36,9 @@
     cursor: pointer;
 }
 
-.navigation__link_active {}
+.navigation__link-active {}
 
-.navigation__item_account {
+.navigation__item-account {
     margin-right: 70px;
     display: flex;
     padding: 0;
@@ -55,14 +55,14 @@
     line-height: 16px;
 }
 
-.navigation__item_account:hover {
+.navigation__item-account:hover {
     opacity: .6;
     cursor: pointer;
 }
 
-.navigation__item_account {}
+.navigation__item-account {}
 
-.navigation__item_button {
+.navigation__button {
     background: url('../../images/profile.svg') center no-repeat;
     border: none;
     border-radius: 6px;

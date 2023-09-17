@@ -18,8 +18,8 @@ function MoviesCardList({ isSave }) {
         <MoviesCard isSave={isSave} />
         <MoviesCard isSave={isSave} />
       </section>
-      <section className="moviesCardList__add">
-        <button className="moviesCardList__button" type="button">
+      <section className="moviesCardList-add">
+        <button className="moviesCardList-add__button" type="button">
           Еще
         </button>
       </section>

@@ -15,7 +15,7 @@ function Header({ loggedIn }) {
   }
 
   const headerIsLogginIn = (
-    <div className="header__container_auth">
+    <div className="header__container-auth">
       <Navigation />
       <div className="header__burger" onClick={handleIsBurger}></div>
       <Burger onClose={handleIsBurger} isBurger={isBurger} />
@@ -23,7 +23,7 @@ function Header({ loggedIn }) {
   );
 
   const headerIsLoggin = (
-    <div className="header__mainContainer">
+    <div className="header__container-loggin">
       <div className="header__buttons">
         <a href="/signup" className="header__button">
           Регистрация
@@ -36,7 +36,7 @@ function Header({ loggedIn }) {
   );
 
   return (
-    <header className={pathname !== "/" ? "header" : "header header__main"}>
+    <header className={pathname !== "/" ? "header" : "header header_main"}>
       <div className="header__container">
         <Logo />
         {loggedIn ? headerIsLogginIn : headerIsLoggin}

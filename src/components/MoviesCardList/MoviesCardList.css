@@ -9,7 +9,7 @@
     row-gap: 29px;
 }
 
-.moviesCardList__add {
+.moviesCardList-add {
     margin: 50px 70px 80px;
     height: 36px;
     border-radius: 6px;
@@ -19,12 +19,12 @@
     align-items: center;
 }
 
-.moviesCardList__add:hover {
+.moviesCardList-add:hover {
     opacity: 0.6;
     cursor: pointer;
 }
 
-.moviesCardList__button {
+.moviesCardList-add__button {
     background: #2F2F2F;
     border: none;
     width: 200px;
@@ -40,7 +40,7 @@
 }
 
 @media screen and (max-width: calc(768px + 20px)) {
-    .moviesCardList__add {
+    .moviesCardList-add {
         margin: 50px 30px 80px;
     }
 
@@ -52,7 +52,7 @@
 }
 
 @media screen and (max-width: calc(340px + 20px)) {
-    .moviesCardList__add {
+    .moviesCardList-add {
         margin: 50px 10px 80px;
     }
 

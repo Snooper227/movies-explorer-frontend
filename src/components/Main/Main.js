@@ -10,7 +10,7 @@ import "./Main.css";
 
 function Main({ isBurger, onBurger, loggedIn }) {
   return (
-    <div className="content">
+    <>
       <Header loggedIn={true} />
       <main className="main">
         <Promo />
@@ -20,7 +20,7 @@ function Main({ isBurger, onBurger, loggedIn }) {
         <Portfolio />
       </main>
       <Footer />
-    </div>
+    </>
   );
 }
 export default Main;

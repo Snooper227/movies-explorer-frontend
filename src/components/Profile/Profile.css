@@ -60,7 +60,7 @@
     line-height: normal;
 }
 
-.profile__button_change {
+.profile__button-change {
     margin: 0 auto 16px;
     color: #FFF;
     text-align: center;
@@ -75,12 +75,12 @@
     border: none;
 }
 
-.profile__button_change:hover {
+.profile__button-change:hover {
     opacity: 0.6;
     cursor: pointer;
 }
 
-.profile__button_exit {
+.profile__button-exit {
     color: #EE3465;
     text-align: center;
     font-size: 13px;
@@ -92,11 +92,11 @@
     border: none;
 }
 
-.profile__button_change_disabled {
+.profile__button-change-disabled {
     display: none;
 }
 
-.profile__button_save {
+.profile__button-save {
     margin: 0 auto 16px;
     width: 410px;
     height: 45px;
@@ -112,16 +112,16 @@
     border: none
 }
 
-.profile__button_save:hover {
+.profile__button-save:hover {
     opacity: 0.6;
     cursor: pointer;
 }
 
-.profile__button_save_disabled {
+.profile__button-save-disabled {
     display: none;
 }
 
-.profile__button_exit:hover {
+.profile__button-exit:hover {
     opacity: 0.6;
     cursor: pointer;
 }
@@ -162,17 +162,17 @@
         width: 120px;
     }
 
-    .profile__button_change {
+    .profile__button-change {
         margin: 0 auto 16px;
         font-size: 12px;
         width: 300px;
     }
 
-    .profile__button_exit {
+    .profile__button-exit {
         font-size: 12px;
     }
 
-    .profile__button_save {
+    .profile__button-save {
         margin: 0 auto 16px;
         font-size: 12px;
         width: 300px;

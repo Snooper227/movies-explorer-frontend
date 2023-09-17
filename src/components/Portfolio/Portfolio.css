@@ -26,7 +26,7 @@
 .portfolio__link {
     display: flex;
     justify-content: space-between;
-    background: transparent url("../../images/Strelochka.svg") right center / 29px no-repeat;
+    background: transparent url("../../images/Strelochka.svg") right center / 19px no-repeat;
     text-decoration: none;
     color: #fff;
     font-size: 30px;
@@ -59,7 +59,7 @@
     .portfolio__link {
         font-size: 28px;
         letter-spacing: -1.12px;
-        background: transparent url("../../images/Strelochka.svg") right center / 27px no-repeat;
+        background: transparent url("../../images/Strelochka.svg") right center / 18px no-repeat;
     }
 }
 
@@ -86,6 +86,6 @@
         font-size: 18px;
         line-height: 28px;
         letter-spacing: -0.72px;
-        background: transparent url("../../images/Strelochka.svg") right center / 18px no-repeat;
+        background: transparent url("../../images/mini-strelka.svg") right center / 11px no-repeat;
     }
 }

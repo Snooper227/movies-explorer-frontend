@@ -4,14 +4,14 @@ import "./Navigation.css";
 
 function Navigation() {
   return (
-    <div className="navigation">
+    <section className="navigation">
       <nav className="navigation__items">
         <li className="navigation__item">
           <NavLink
             to="/movies"
             className={({ isActive }) =>
               isActive
-                ? "navigation__link navigation__link_active"
+                ? "navigation__link navigation__link-active"
                 : "navigation__link"
             }
           >
@@ -23,7 +23,7 @@ function Navigation() {
             to="/saved-movies"
             className={({ isActive }) =>
               isActive
-                ? "navigation__link navigation__link_active"
+                ? "navigation__link navigation__link-active"
                 : "navigation__link"
             }
           >
@@ -31,13 +31,13 @@ function Navigation() {
           </NavLink>
         </li>
         <li className="navigation__item">
-          <NavLink to="/profile" className="navigation__item_account">
+          <NavLink to="/profile" className="navigation__item-account">
             Аккаунт
-            <div className="navigation__item_button"></div>
+            <div className="navigation__button"></div>
           </NavLink>
         </li>
       </nav>
-    </div>
+    </section>
   );
 }
 

@@ -15,7 +15,7 @@ function Profile() {
       <main>
         <section className="profile">
           <form className="profile__form">
-            <h2 className="profile__title">Привет, Станислав!</h2>
+            <h1 className="profile__title">Привет, Станислав!</h1>
             <div className="profile__box">
               <p className="profile__text">имя</p>
               <input
@@ -38,8 +38,8 @@ function Profile() {
           <button
             className={
               !isActiveEdit
-                ? "profile__button_change"
-                : "profile__button_change profile__button_change_disabled"
+                ? "profile__button-change"
+                : "profile__button-change profile__button-change-disabled"
             }
             onClick={handleIsActive}
             type="button"
@@ -49,15 +49,15 @@ function Profile() {
           <button
             className={
               isActiveSave
-                ? "profile__button_save"
-                : "profile__button_save profile__button_save_disabled"
+                ? "profile__button-save"
+                : "profile__button-save profile__button-save-disabled"
             }
             onClick={handleIsActive}
             type="button"
           >
             Сохранить
           </button>
-          <button className="profile__button_exit">Выйти из аккаунта</button>
+          <button className="profile__button-exit">Выйти из аккаунта</button>
         </section>
       </main>
     </>

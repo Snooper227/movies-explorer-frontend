@@ -68,7 +68,7 @@
     opacity: 0.6;
 }
 
-.moviesCard__button_active {
+.moviesCard__button-active {
     margin: 18px auto 18px;
     border-radius: 30px;
     border: none;
@@ -79,7 +79,7 @@
     cursor: pointer;
 }
 
-.moviesCard__button_delete {
+.moviesCard__button-delete {
     margin: 18px auto 18px;
     border-radius: 30px;
     border: none;
@@ -88,12 +88,12 @@
     background: url('../../images/delete_button.svg') no-repeat center;
 }
 
-.moviesCard__button_delete:hover {
+.moviesCard__button-delete:hover {
     opacity: 0.6;
     cursor: pointer;
 }
 
-.moviesCard__button_active:hover {
+.moviesCard__button-active:hover {
     opacity: 0.6;
     cursor: pointer;
 }
@@ -141,7 +141,7 @@
         margin: 14px auto 14px;
     }
 
-    .moviesCard__button_active {
+    .moviesCard__button-active {
         margin: 14px auto 14px;
     }
 }

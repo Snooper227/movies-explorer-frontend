@@ -10,7 +10,7 @@ function Register() {
       </div>
       <form className="register__form">
         <div className="register__box">
-          <p className="register_lable">Имя</p>
+          <p className="register__lable">Имя</p>
           <input
             className="register__input register__input_name"
             type="name"
@@ -23,7 +23,7 @@ function Register() {
           </span>
         </div>
         <div className="register__box">
-          <p className="register_lable">E-mail</p>
+          <p className="register__lable">E-mail</p>
           <input
             className="register__input register__input_login-email"
             type="email"
@@ -36,7 +36,7 @@ function Register() {
           </span>
         </div>
         <div className="register__box">
-          <p className="register_lable">Пароль</p>
+          <p className="register__lable">Пароль</p>
           <input
             className="register__input register__input_login-pass"
             type="password"

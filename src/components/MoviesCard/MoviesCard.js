@@ -12,7 +12,7 @@ function MoviesCard({ isSave }) {
   return (
     <div className="moviesCard">
       <div className="moviesCard__header">
-        <h3 className="moviesCard__title">В погоне за Бенкси</h3>
+        <h1 className="moviesCard__title">В погоне за Бенкси</h1>
         <p className="moviesCard__time">0ч 42м</p>
       </div>
       <img className="moviesCard__image" src={photo} alt="картинка" />
@@ -28,14 +28,14 @@ function MoviesCard({ isSave }) {
             </button>
           ) : (
             <button
-              className="moviesCard__button_active"
+              className="moviesCard__button-active"
               type="button"
               onClick={handleIsActive}
             ></button>
           )}
         </div>
       ) : (
-        <button className="moviesCard__button_delete" type="button"></button>
+        <button className="moviesCard__button-delete" type="button"></button>
       )}
     </div>
   );
