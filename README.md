@@ -1,7 +1,6 @@
 # movies-explorer-frontend
 
 Был выбран макет dark-4
-Адрес репозитория: https://github.com/Snooper227/movies-explorer-frontend
 
 Ссылка на Pull request: https://github.com/Snooper227/movies-explorer-frontend/pull/2
 
