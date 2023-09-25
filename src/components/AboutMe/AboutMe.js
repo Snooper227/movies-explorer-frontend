@@ -1,5 +1,5 @@
-import "./AboutMe.css";
 import Iam from "../../images/I.jpeg";
+import "./AboutMe.css";
 
 function AboutMe() {
   return (

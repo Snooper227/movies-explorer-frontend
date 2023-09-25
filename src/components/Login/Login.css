@@ -34,8 +34,6 @@
     line-height: normal;
 }
 
-.login__form {}
-
 .login__lable {
     color: #8B8B8B;
     font-size: 10px;
@@ -58,6 +56,10 @@
     margin-bottom: 22px;
 }
 
+.login__bottom-line_error:not(:last-child) {
+    margin-bottom: 6px;
+}
+
 .login__input {
     padding: 0;
     width: 396px;
@@ -74,16 +76,20 @@
 
 .login__input-error {
     display: none;
+    height: 12px;
 }
 
-.login_input-error_active {
+.login__input-error_active {
+    width: 396px;
     display: block;
     color: #EE3465;
+    font-family: "Inter", Arial, sans-serif;
     font-size: 10px;
     font-style: normal;
-    font-family: "Inter", Arial, sans-serif;
     font-weight: 400;
     line-height: normal;
+    position: relative;
+    margin-bottom: 6px;
 }
 
 .login__button {
@@ -100,6 +106,10 @@
     border-radius: 3px;
     border: none;
     background: #4285F4;
+}
+
+.login__button-disabled {
+    background-color: #424242;
 }
 
 .login__button:hover {
@@ -170,6 +180,10 @@
     }
 
     .login__bottom-line {
+        width: 260px;
+    }
+
+    .login__input-error_active {
         width: 260px;
     }
 

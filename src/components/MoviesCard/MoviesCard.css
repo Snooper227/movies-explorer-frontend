@@ -43,10 +43,12 @@
     border: none;
 
 }
-.moviesCard__box{
+
+.moviesCard__box {
     display: flex;
     align-items: center;
 }
+
 .moviesCard__button {
     margin: 18px auto 18px;
     border-radius: 30px;

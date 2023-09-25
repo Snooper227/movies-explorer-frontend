@@ -1,6 +1,6 @@
 import React from "react";
-import "./Burger.css";
 import { NavLink } from "react-router-dom";
+import "./Burger.css";
 
 function Burger({ onClose, isBurger }) {
   return (

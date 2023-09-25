@@ -19,10 +19,12 @@
     margin-bottom: 40px;
     background: url("../../images/logo_diplom.svg") right center no-repeat;
 }
+
 .register__logo:hover {
     opacity: 0.6;
     cursor: pointer;
 }
+
 .register__title {
     margin: 0;
     width: 396px;
@@ -55,7 +57,7 @@
 .register__input {
     padding: 0;
     width: 396px;
-    margin: 5px auto 22px;
+    margin: 5px auto 10px;
     font-family: "Inter", Arial, sans-serif;
     color: #FFF;
     font-size: 14px;
@@ -66,9 +68,13 @@
     border: none;
 }
 
-/* .register__bottom-line:not(:last-child) {
+.register__bottom-line:not(:last-child) {
     margin-bottom: 22px;
-} */
+}
+
+.register__bottom-line_error:not(:last-child) {
+    margin-bottom: 6px;
+}
 
 .register__input-error {
     display: none;
@@ -76,6 +82,7 @@
 }
 
 .register__input-error_active {
+    width: 396px;
     display: block;
     color: #EE3465;
     font-family: "Inter", Arial, sans-serif;
@@ -83,6 +90,8 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    position: relative;
+    margin-bottom: 6px;
 }
 
 .register__button {
@@ -99,6 +108,10 @@
     border-radius: 3px;
     border: none;
     background: #4285F4;
+}
+
+.register__button-disabled {
+    background-color: #424242;
 }
 
 .register__button:hover {
@@ -167,6 +180,10 @@
     }
 
     .register__bottom-line {
+        width: 260px;
+    }
+
+    .register__input-error_active {
         width: 260px;
     }
 
