@@ -17,7 +17,7 @@ import Preloader from "../Preloader/Preloader";
 import handleMovies from "../../utils/HandleMovies";
 import failImage from "../../images/failed.svg";
 import successImage from "../../images/true.svg";
-import './App.css'
+import "./App.css";
 
 function App() {
   const [loggedIn, setLoggedIn] = React.useState(false);
@@ -88,11 +88,11 @@ function App() {
   }, []);
 
   React.useEffect(() => {
-    document.addEventListener('keydown', handleEscapeClose);
+    document.addEventListener("keydown", handleEscapeClose);
     return () => {
-      document.removeEventListener('keydown', handleEscapeClose);
-    }
-  })
+      document.removeEventListener("keydown", handleEscapeClose);
+    };
+  });
 
   function getUserInfo() {
     mainApi

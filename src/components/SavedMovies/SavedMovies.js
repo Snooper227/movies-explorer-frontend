@@ -1,4 +1,5 @@
 import React from "react";
+import { mainApi } from "../../utils/MainApi";
 import SearchForm from "../SearchForm/SearchForm";
 import Header from "../Header/Header";
 import MoviesCardList from "../MoviesCardList/MoviesCardList";
@@ -28,6 +29,7 @@ function SavedMovies({ loggedIn, allMovies, onSave, onDelete, savedMovies }) {
 
   React.useEffect(() => {
     setLongMovies(allMovies);
+    setShotMovies(handleFilter(allMovies));
   }, [allMovies]);
 
   React.useEffect(() => {
@@ -73,6 +75,18 @@ function SavedMovies({ loggedIn, allMovies, onSave, onDelete, savedMovies }) {
     });
   }
 
+  function removeItem(_id) {
+    const newArraySaved = allMovies.filter((c) => {
+      if (_id === c.id) {
+        return false;
+      } else {
+        return true;
+      }
+    });
+    setLongMovies(newArraySaved);
+    onDelete(_id);
+  }
+
   function handleFilter(moviesArray) {
     return moviesArray.filter((movie) => {
       return movie.duration <= 40;
@@ -86,18 +100,6 @@ function SavedMovies({ loggedIn, allMovies, onSave, onDelete, savedMovies }) {
   function handleCheckbox(value) {
     setActive(value);
     setIsCheckboxActive(value);
-  }
-
-  function removeItem(_id) {
-    const newArraySaved = longMovies.filter((c) => {
-      if (_id === c.id) {
-        return false;
-      } else {
-        return true;
-      }
-    });
-    setLongMovies(newArraySaved);
-    onDelete(_id);
   }
 
   function resize() {
@@ -140,7 +142,8 @@ function SavedMovies({ loggedIn, allMovies, onSave, onDelete, savedMovies }) {
             isLoading={isLoading}
             onSave={onSave}
             onDelete={removeItem}
-            movies={ !searchRequest
+            movies={
+              !searchRequest
                 ? isCheckboxActive
                   ? shotMovies
                   : allMovies
