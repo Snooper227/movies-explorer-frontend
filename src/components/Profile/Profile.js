@@ -11,6 +11,7 @@ function Profile({ loggedIn, handleLogOut, onSubmit }) {
 
   const [isDisabled, setIsDisabled] = React.useState(false);
 
+  const isVision = (values.name === currentUser.name && values.email === currentUser.email) || !isValid
   React.useEffect(() => {
     resetForm({ email: currentUser.email, name: currentUser.name });
   }, [currentUser]);
@@ -39,7 +40,7 @@ function Profile({ loggedIn, handleLogOut, onSubmit }) {
       <main>
         <section className="profile">
           <form className="profile__form" onSubmit={handleSubmit}>
-            <h1 className="profile__title">{`Привет, ${name}!`}</h1>
+            <h1 className="profile__title">{`Привет, ${currentUser.name}!`}</h1>
             <div className="profile__items">
               <div className="profile__box">
                 <p className="profile__text">имя</p>
@@ -100,7 +101,7 @@ function Profile({ loggedIn, handleLogOut, onSubmit }) {
             <button
               className={
                 isActiveSave
-                  ? isValid
+                  ? !isVision
                     ? "profile__button-save"
                     : "profile__button-save profile__button-saved_nonActive"
                   : "profile__button-save profile__button-save-disabled"
@@ -108,9 +109,7 @@ function Profile({ loggedIn, handleLogOut, onSubmit }) {
               onClick={handleIsActive}
               type="submit"
               disabled={
-                (values.name === currentUser.name &&
-                  values.email === currentUser.email) ||
-                !isValid
+                isVision
               }
             >
               Сохранить

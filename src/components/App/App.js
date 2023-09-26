@@ -61,7 +61,7 @@ function App() {
 
   React.useEffect(() => {
     checkToken();
-  }, [navigate]);
+  }, []);
 
   React.useEffect(() => {
     checkLocalStorage();
@@ -115,7 +115,7 @@ function App() {
       .then(() => {
         setRegistered(true);
         setTooltipData("Вы успешно зарегистрировались!");
-        navigate("./signin");
+        handleLogin(email, password);
       })
       .catch((err) => {
         setRegistered(false);

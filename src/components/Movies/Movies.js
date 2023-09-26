@@ -25,11 +25,10 @@ function Movies({ loggedIn, savedMovies, allMovies, onSave, onDelete }) {
     status: false,
     title: "",
   });
-
   React.useEffect(() => {
     searchMovies();
     filterShotMovies();
-  }, [searchRequest, isCheckboxActive]);
+  }, [searchRequest, isCheckboxActive, isActive]);
 
   React.useEffect(() => {
     checkLastRequest();
@@ -57,6 +56,7 @@ function Movies({ loggedIn, savedMovies, allMovies, onSave, onDelete }) {
           setRequestLocalStorage("lastRequestedMovies", moviesRender);
           setLongMovies(moviesRender);
           setRequestLocalStorage("checkboxState", isCheckboxActive);
+          setRequestLocalStorage("isActive", isActive);
         }
       }
       return;
@@ -71,8 +71,8 @@ function Movies({ loggedIn, savedMovies, allMovies, onSave, onDelete }) {
     return moviesArray.filter((movie) => {
       const c = keyword.toLowerCase().trim();
       return (
-        movie.nameRu.toLowerCase().indexOf(c) !== -1 ||
-        movie.nameEn.toLowerCase().indexOf(c) !== -1
+        movie.nameRU.toLowerCase().indexOf(c) !== -1 ||
+        movie.nameEN.toLowerCase().indexOf(c) !== -1
       );
     });
   }
@@ -103,6 +103,10 @@ function Movies({ loggedIn, savedMovies, allMovies, onSave, onDelete }) {
     const lastRequestCheckboxState = localStorage.getItem("checkboxState");
     if (lastRequestCheckboxState) {
       setIsCheckboxActive(getLastRequestLocalStorage("checkboxState"));
+    }
+    const lastRequestIsActive = localStorage.getItem("isActive");
+    if (lastRequestIsActive) {
+      setActive(getLastRequestLocalStorage("isActive"));
     }
     return;
   }

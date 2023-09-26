@@ -67,8 +67,8 @@ function SavedMovies({ loggedIn, allMovies, onSave, onDelete, savedMovies }) {
     return moviesArray.filter((movie) => {
       const c = keyword.toLowerCase().trim();
       return (
-        movie.nameRu.toLowerCase().indexOf(c) !== -1 ||
-        movie.nameEn.toLowerCase().indexOf(c) !== -1
+        movie.nameRU.toLowerCase().indexOf(c) !== -1 ||
+        movie.nameEN.toLowerCase().indexOf(c) !== -1
       );
     });
   }
@@ -140,11 +140,10 @@ function SavedMovies({ loggedIn, allMovies, onSave, onDelete, savedMovies }) {
             isLoading={isLoading}
             onSave={onSave}
             onDelete={removeItem}
-            movies={
-              !searchRequest
+            movies={ !searchRequest
                 ? isCheckboxActive
                   ? shotMovies
-                  : longMovies
+                  : allMovies
                 : isCheckboxActive
                 ? shotMovies
                 : longMovies

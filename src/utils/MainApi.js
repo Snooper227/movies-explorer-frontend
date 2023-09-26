@@ -11,6 +11,7 @@ export default class MainApi {
   getUserInfo() {
     const token = localStorage.getItem("jwt");
     return fetch(`${this._baseUrl}/users/me`, {
+      method: 'GET',
       headers: {
         authorization: `Bearer ${token}`,
         "Content-type": "application/json",
@@ -51,8 +52,8 @@ export default class MainApi {
         trailerLink: data.trailerLink,
         thumbnail: data.thumbnail,
         movieId: data.movieId,
-        nameRU: data.nameRu,
-        nameEN: data.nameEn,
+        nameRU: data.nameRU,
+        nameEN: data.nameEN,
       }),
     }).then(this._checkRes);
   }

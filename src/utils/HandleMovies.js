@@ -9,8 +9,8 @@ function handleMovies(movie) {
     trailerLink: movie.trailerLink,
     thumbnail: `https://api.nomoreparties.co/${movie.image.formats.thumbnail.url}`,
     movieId: movie.id,
-    nameRu: movie.nameRU,
-    nameEn: movie.nameEN,
+    nameRU: movie.nameRU,
+    nameEN: movie.nameEN,
     key: movie.id,
   }));
 }

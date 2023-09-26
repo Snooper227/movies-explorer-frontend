@@ -16,7 +16,7 @@ function SearchForm({
     handleCheckbox(!checkboxState, !isActive);
   }
   useEffect(() => {
-    resetForm({ movieTitle: searchRequest });
+    resetForm({ movietitle: searchRequest });
   }, [searchRequest]);
 
   function handelSearch(evt) {

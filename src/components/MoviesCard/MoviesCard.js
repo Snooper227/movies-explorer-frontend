@@ -2,7 +2,7 @@ import MovieDuration from "../../utils/MovieDuration";
 import "./MoviesCard.css";
 
 function MoviesCard({ isSavedMovies, onSave, onDelete, movie, savedMovies }) {
-  const { nameRu, image, duration, trailerLink } = movie;
+  const { nameRU, image, duration, trailerLink } = movie;
   const chekedDuration = MovieDuration(duration);
 
   let isLiked = false;
@@ -18,11 +18,11 @@ function MoviesCard({ isSavedMovies, onSave, onDelete, movie, savedMovies }) {
   return (
     <div className="moviesCard">
       <div className="moviesCard__header">
-        <h1 className="moviesCard__title">{nameRu}</h1>
+        <h1 className="moviesCard__title">{nameRU}</h1>
         <p className="moviesCard__time">{chekedDuration}</p>
       </div>
       <a href={trailerLink} target="_blank" rel="noreferrer">
-        <img className="moviesCard__image" src={image} alt={nameRu} />
+        <img className="moviesCard__image" src={image} alt={nameRU} />
       </a>
       {!isSavedMovies ? (
         <div className="moviesCard__box">
