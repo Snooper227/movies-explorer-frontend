@@ -8,6 +8,7 @@ import useWindowInfo from "../../utils/WindowSize";
 import faildImage from "../../images/failed.svg";
 import InfoTooltip from "../InfoTooltip/InfoTooltip";
 import "./SavedMovies.css";
+import { getAllByAltText } from "@testing-library/react";
 
 function SavedMovies({ loggedIn, allMovies, onSave, onDelete, savedMovies }) {
   const [isLoading, setIsLoading] = React.useState(false);
@@ -29,8 +30,9 @@ function SavedMovies({ loggedIn, allMovies, onSave, onDelete, savedMovies }) {
 
   React.useEffect(() => {
     setLongMovies(allMovies);
-    setShotMovies(handleFilter(allMovies));
-  }, [allMovies]);
+    setShotMovies(handleFilter(allMovies))
+    searchMovies()
+  }, [allMovies, searchRequest]);
 
   React.useEffect(() => {
     searchMovies();
@@ -55,6 +57,7 @@ function SavedMovies({ loggedIn, allMovies, onSave, onDelete, savedMovies }) {
           setIsTooltipOpen(true);
         } else {
           setLongMovies(moviesRender);
+          setShotMovies(handleFilter(moviesRender));
         }
       }
       return;

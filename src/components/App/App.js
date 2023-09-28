@@ -154,13 +154,18 @@ function App() {
       .changeUserInfo(name, email)
       .then((user) => {
         setCurrentUser(user);
+        setTooltipData("Успешно!");
         setApiErrors({ ...apiErrors, profile: {} });
       })
       .catch((err) => {
         console.log(err);
+        setTooltipData("Что-то не так! Попробуйте еще раз!");
         setApiErrors({ ...apiErrors, profile: { err } });
       })
-      .finally(() => setIsLoading(false));
+      .finally(() => {
+        setIsTooltipOpen(true);
+        setIsLoading(false);
+      });
   }
 
   function handleGetAllMovies() {
