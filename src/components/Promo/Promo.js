@@ -1,5 +1,5 @@
-import "./Promo.css";
 import Logopromo from "../../images/Earth.svg";
+import "./Promo.css";
 
 function Promo() {
   return (

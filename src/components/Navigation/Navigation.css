@@ -36,8 +36,6 @@
     cursor: pointer;
 }
 
-.navigation__link-active {}
-
 .navigation__item-account {
     margin-right: 70px;
     display: flex;
@@ -59,8 +57,6 @@
     opacity: .6;
     cursor: pointer;
 }
-
-.navigation__item-account {}
 
 .navigation__button {
     background: url('../../images/profile.svg') center no-repeat;

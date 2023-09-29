@@ -1,28 +1,40 @@
-import { useState } from "react";
-import photo from "../../images/movie.png";
+import MovieDuration from "../../utils/MovieDuration";
 import "./MoviesCard.css";
 
-function MoviesCard({ isSave }) {
-  // const isLiked = true;
-  // const movieLikeButtonClassName = {isLiked ? 'moviesCard__button' : 'moviesCard__button MoviesCard__button_active'};
-  const [isActive, setActive] = useState(false);
-  function handleIsActive() {
-    setActive(!isActive);
-  }
+function MoviesCard({ isSavedMovies, onSave, onDelete, movie, savedMovies }) {
+  const { nameRU, image, duration, trailerLink } = movie;
+  const chekedDuration = MovieDuration(duration);
+
+  let isLiked = false;
+  let likeId;
+
+  isLiked = savedMovies.some((item) => {
+    if (item.movieId === movie.movieId) {
+      likeId = item._id;
+      return true;
+    }
+    return false;
+  });
   return (
     <div className="moviesCard">
       <div className="moviesCard__header">
-        <h1 className="moviesCard__title">В погоне за Бенкси</h1>
-        <p className="moviesCard__time">0ч 42м</p>
+        <h1 className="moviesCard__title">{nameRU}</h1>
+        <p className="moviesCard__time">{chekedDuration}</p>
       </div>
-      <img className="moviesCard__image" src={photo} alt="картинка" />
-      {!isSave ? (
+      <a href={trailerLink} target="_blank" rel="noreferrer">
+        <img className="moviesCard__image" src={image} alt={nameRU} />
+      </a>
+      {!isSavedMovies ? (
         <div className="moviesCard__box">
-          {!isActive ? (
+          {!isLiked ? (
             <button
               className="moviesCard__button"
               type="button"
-              onClick={handleIsActive}
+              onClick={() => {
+                isLiked || isSavedMovies
+                  ? onDelete(movie._id ? movie._id : likeId)
+                  : onSave(movie);
+              }}
             >
               Сохранить
             </button>
@@ -30,12 +42,20 @@ function MoviesCard({ isSave }) {
             <button
               className="moviesCard__button-active"
               type="button"
-              onClick={handleIsActive}
+              onClick={() => {
+                isLiked || isSavedMovies
+                  ? onDelete(movie._id ? movie._id : likeId)
+                  : onSave(movie);
+              }}
             ></button>
           )}
         </div>
       ) : (
-        <button className="moviesCard__button-delete" type="button"></button>
+        <button
+          className="moviesCard__button-delete"
+          type="button"
+          onClick={() => onDelete(movie._id)}
+        ></button>
       )}
     </div>
   );

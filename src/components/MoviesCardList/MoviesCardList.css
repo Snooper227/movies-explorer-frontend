@@ -39,6 +39,10 @@
     line-height: normal;
 }
 
+.moviesCardList-add__button:hover {
+    cursor: pointer;
+}
+
 @media screen and (max-width: calc(768px + 20px)) {
     .moviesCardList-add {
         margin: 50px 30px 80px;

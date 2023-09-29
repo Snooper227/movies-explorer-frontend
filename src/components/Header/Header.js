@@ -1,9 +1,8 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
 import Logo from "../Logo/Logo";
 import Navigation from "../Navigation/Navigation";
 import Burger from "../Burger/Burger";
-import { Link, useLocation } from "react-router-dom";
 import "./Header.css";
 
 function Header({ loggedIn }) {

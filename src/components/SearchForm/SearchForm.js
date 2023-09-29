@@ -1,17 +1,66 @@
-import { useState } from "react";
+import { useEffect } from "react";
+import useValidation from "../../utils/useValidation";
 import "./SearchForm.css";
 
-function SearchForm({ value, onChange }) {
-  const [isActive, setActive] = useState(false);
+function SearchForm({
+  isActive,
+  handleSearch,
+  handleCheckbox,
+  searchRequest,
+  checkboxState,
+}) {
+  const { values, handleChange, errors, isValid, resetForm } = useValidation();
+  const { movietitle } = values;
+
   function handleIsActive() {
-    setActive(!isActive);
+    handleCheckbox(!checkboxState, !isActive);
   }
+  useEffect(() => {
+    resetForm({ movietitle: searchRequest });
+  }, [searchRequest]);
+
+  function handelSearch(evt) {
+    evt.preventDefault();
+
+    handleSearch(movietitle);
+  }
+
   return (
     <section className="searchForm">
-      <form className="searchForm__container">
-        <input className="searchForm__input" placeholder="Фильм"></input>
-        <button className="searchForm__button">Поиск</button>
+      <form
+        className="searchForm__container"
+        onSubmit={handelSearch}
+        noValidate
+      >
+        <input
+          className="searchForm__input"
+          name="movietitle"
+          placeholder="Фильм"
+          value={values.movietitle || ""}
+          onChange={handleChange}
+          minLength="1"
+          maxLength="30"
+          pattern="^[A-Za-zА-Яа-яЁё\-\s]+$"
+          required
+        ></input>
+        <button
+          className={`searchForm__button ${
+            !isValid && errors ? "searchForm__button_disabled" : ""
+          }`}
+          type="submit"
+          disabled={!isValid}
+        >
+          Поиск
+        </button>
       </form>
+      <span
+        className={`searchform__error ${
+          !isValid && errors.movietitle ? "searchform__error-active" : ""
+        }`}
+        id="searchForm-error"
+      >
+        {errors.movietitle || ""}
+      </span>
       <div className="searchForm__checkbox">
         <button
           className={
@@ -19,16 +68,11 @@ function SearchForm({ value, onChange }) {
               ? "searchForm__checkbox-button"
               : "searchForm__checkbox-button searchForm__checkbox-button-active"
           }
-          type="button"
+          type="submite"
           onClick={handleIsActive}
         ></button>
         <p className="searchForm__checkbox-text">Короткометражки</p>
       </div>
-      {/* <label className="searchForm__checkbox-google">
-                <input className='searchForm__checkbox_input' type="checkbox" />
-                <span className="searchForm__checkbox-google-switch"></span>
-                <p className='searchForm__text'>Короткометражки</p>
-            </label> */}
     </section>
   );
 }

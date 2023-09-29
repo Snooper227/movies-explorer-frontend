@@ -4,7 +4,7 @@
     justify-content: center;
     background-color: #222222;
     width: 360px;
-    height: 319px;
+    min-height: 319px;
     border-radius: 6px;
     background: #222;
     box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.08);
@@ -43,10 +43,12 @@
     border: none;
 
 }
-.moviesCard__box{
+
+.moviesCard__box {
     display: flex;
     align-items: center;
 }
+
 .moviesCard__button {
     margin: 18px auto 18px;
     border-radius: 30px;
@@ -101,7 +103,7 @@
 @media screen and (max-width: calc(768px + 20px)) {
     .moviesCard {
         width: 342px;
-        height: 309px;
+        min-height: 309px;
     }
 
     .moviesCard__title {
@@ -118,7 +120,7 @@
 @media screen and (max-width: calc(340px + 20px)) {
     .moviesCard {
         width: 300px;
-        height: 271px;
+        min-height: 271px;
     }
 
     .moviesCard__title {
