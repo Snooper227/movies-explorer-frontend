@@ -1,4 +1,4 @@
-import Iam from "../../images/I.jpeg";
+import Iam from "../../images/I.jpg";
 import "./AboutMe.css";
 
 function AboutMe() {

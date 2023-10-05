@@ -8,31 +8,31 @@ function Portfolio() {
         <li className="portfolio__list-item">
           <a
             className="portfolio__link"
-            href="#"
+            href="https://github.com/Snooper227/how-to-learn"
             target="_blank"
             rel="noreferrer"
           >
-            Статичный сайт
+            How-To-Learn
           </a>
         </li>
         <li className="portfolio__list-item">
           <a
             className="portfolio__link"
-            href="#"
+            href="https://snooper227.github.io/russian-travel/"
             target="_blank"
             rel="noreferrer"
           >
-            Адаптивный Сайт
+            Путешествия по России
           </a>
         </li>
         <li className="portfolio__list-item">
           <a
             className="portfolio__link"
-            href="#"
+            href="https://github.com/Snooper227/react-mesto-api-full-gha"
             target="_blank"
             rel="noreferrer"
           >
-            Одностраничное приложение
+            Mesto
           </a>
         </li>
       </ul>
